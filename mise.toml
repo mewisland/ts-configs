@@ -5,7 +5,7 @@ node = "26.7.0"
 pnpm = "11.22.0"
 
 [tasks.build]
-run = [{ tasks = ["check"] }, "pnpm exec tsdown"]
+run = [{ tasks = ["check"] }, "pnpm exec tsdown", "pnpm publish --dry-run --no-git-checks"]
 
 [tasks.check]
 run = [
@@ -15,7 +15,6 @@ run = [
   "pnpm exec oxfmt --check --no-error-on-unmatched-pattern",
   "pnpm exec oxlint --no-error-on-unmatched-pattern",
   "ghalint run",
-  "pnpm publish --dry-run --no-git-checks",
 ]
 
 [tasks.fix]
