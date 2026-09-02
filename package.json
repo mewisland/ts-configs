@@ -1,12 +1,40 @@
 {
+  "name": "@mewisland/ts-configs",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A collection of TypeScript ecosystem configs",
+  "homepage": "https://github.com/mewisland/ts-configs#readme",
+  "bugs": {
+    "url": "https://github.com/mewisland/ts-configs/issues"
+  },
+  "author": {
+    "name": "vew94",
+    "url": "https://github.com/vew94"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mewisland/ts-configs.git"
+  },
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "build": "tsdown",
+    "prepublishOnly": "pnpm run build",
     "format": "oxfmt --check --no-error-on-unmatched-pattern",
     "lint": "oxlint --no-error-on-unmatched-pattern",
     "test": "vitest run"
-  },
-  "dependencies": {
-    "zod": "4.4.3"
   },
   "devDependencies": {
     "@stylistic/eslint-plugin": "5.10.0",
@@ -15,6 +43,8 @@
     "oxfmt": "0.63.0",
     "oxlint": "1.78.0",
     "oxlint-tsgolint": "7.0.2001",
+    "publint": "0.3.24",
+    "tsdown": "0.22.14",
     "typescript": "7.0.2",
     "vitest": "4.1.10"
   },

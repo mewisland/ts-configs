@@ -4,6 +4,9 @@ ghalint = "1.5.6"
 node = "26.7.0"
 pnpm = "11.22.0"
 
+[tasks.build]
+run = [{ tasks = ["check"] }, "pnpm exec tsdown"]
+
 [tasks.check]
 run = [
   "betterleaks git --no-banner",
@@ -12,6 +15,7 @@ run = [
   "pnpm exec oxfmt --check --no-error-on-unmatched-pattern",
   "pnpm exec oxlint --no-error-on-unmatched-pattern",
   "ghalint run",
+  "pnpm publish --dry-run --no-git-checks",
 ]
 
 [tasks.fix]
