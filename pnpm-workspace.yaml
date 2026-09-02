@@ -1,8 +1,12 @@
-allowBuilds:
-  lefthook: true
-
-savePrefix: ""
-
 update:
   changeset: true
   githubActions: true
+
+allowBuilds:
+  lefthook: true
+
+versioning:
+  changelog:
+    storage: repository
+
+savePrefix: ""
