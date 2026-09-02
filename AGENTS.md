@@ -22,6 +22,9 @@ mise tasks run fix
 
 # Run tests
 pnpm test
+
+# Build
+mise tasks run build
 ```
 
 ## Project Structure

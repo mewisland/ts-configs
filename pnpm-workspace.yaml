@@ -2,3 +2,7 @@ allowBuilds:
   lefthook: true
 
 savePrefix: ""
+
+update:
+  changeset: true
+  githubActions: true
