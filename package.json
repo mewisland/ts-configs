@@ -21,10 +21,6 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    ".": {
-      "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs"
-    },
     "./oxfmt": {
       "types": "./dist/oxfmt.d.mts",
       "import": "./dist/oxfmt.mjs"
@@ -35,7 +31,6 @@
   },
   "scripts": {
     "build": "tsdown",
-    "prepublishOnly": "pnpm run build",
     "format": "oxfmt --check --no-error-on-unmatched-pattern",
     "lint": "oxlint --no-error-on-unmatched-pattern",
     "test": "vitest run"
