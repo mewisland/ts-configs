@@ -15,7 +15,7 @@ run = [
   "pnpm exec oxfmt --check --no-error-on-unmatched-pattern",
   "pnpm exec oxlint --no-error-on-unmatched-pattern",
   "ghalint run",
-  "pnpm publish --dry-run",
+  "pnpm publish --dry-run --no-git-checks",
 ]
 
 [tasks.fix]
