@@ -1,4 +1,4 @@
 allowBuilds:
   lefthook: true
 
-savePrefix: ''
+savePrefix: ""
